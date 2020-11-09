@@ -25,10 +25,10 @@ The same metric AUC which is given in kaggle is used to measure the performance 
 **PROGRESS**
 
 
-[x] Hair Artifact Removal
-[] Color Constancy
-[] Stratified Group K-Fold Split
-[] Label Smoothing
-[] Training
-[] Testing
+- [x] Hair Artifact Removal
+- [ ] Color Constancy
+- [ ] Stratified Group K-Fold Split
+- [ ] Label Smoothing
+- [ ] Training
+- [ ] Testing
       
