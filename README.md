@@ -5,7 +5,7 @@
 Steps performed:
   1. Image Preprocessing:
       * Hair Artifact Removal using Bottom Hat Filter and inpainting.
-      * Color Constancy corrections using Gray world and max RGB algorithms
+      * Color Constancy corrections using Gray world and max RGB algorithms(**Originally constructed by <a href="https://github.com/JiaxinZhuang/Skin-Lesion-Recognition.Pytorch">LincolnZjx</a>**)
   
   2. Training CNN:
       **Efficient Nets are trained in both ensemble and stand-alone manner**
