@@ -26,7 +26,7 @@ The same metric AUC which is given in kaggle is used to measure the performance 
 
 
 - [x] Hair Artifact Removal
-- [ ] Color Constancy
+- [x] Color Constancy
 - [ ] Stratified Group K-Fold Split
 - [ ] Label Smoothing
 - [ ] Training
