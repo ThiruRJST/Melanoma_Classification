@@ -1,6 +1,7 @@
 import os
 import cv2
 from tqdm import tqdm
+from Preprocessing_Utils.Serializer import  Serialize_Write
 
 
 def hair_remove(image):
@@ -53,7 +54,7 @@ def shade_of_gray_cc(img, power=6, gamma=2.2):
 
 
 def removal_contractor(paths, des_path, Subset, color_const=False):
-    if des_path is None:
+    if des_path == None:
         des_path = os.path.join(os.getcwd(), Subset)
     else:
         des_path = os.path.join(des_path, Subset)
@@ -66,8 +67,10 @@ def removal_contractor(paths, des_path, Subset, color_const=False):
                 img = cv2.resize(img, (512, 512))
                 cleaned_img = hair_remove(img)
                 if color_const is not False:
-                    cleaned_img = shade_of_gray_cc(cleaned_img)
+                    cleaned_img = shade_of_gray_cc(img=cleaned_img, gamma=2.2)
                 cv2.imwrite(os.path.join(des_path, img_name), cleaned_img)
+                paths.remove(p)
+                Serialize_Write("/home/thirumalaikumar/FinalYearProject/Train_Cleaned", paths)
 
 
         else:
@@ -80,5 +83,7 @@ def removal_contractor(paths, des_path, Subset, color_const=False):
                 img = cv2.resize(img, (512, 512))
                 cleaned_img = hair_remove(img)
                 if color_const is not False:
-                    cleaned_img = shade_of_gray_cc(cleaned_img)
+                    cleaned_img = shade_of_gray_cc(cleaned_img, gamma=2.2)
                 cv2.imwrite(os.path.join(des_path, img_name), cleaned_img)
+                paths.remove(p)
+                Serialize_Write("/home/thirumalaikumar/FinalYearProject/Train_Cleaned", paths)
