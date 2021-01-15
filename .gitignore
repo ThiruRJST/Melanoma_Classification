@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+.vscode/
+lightning_logs/
+melanoma/
+tblogs/
+Train_Cleaned/
